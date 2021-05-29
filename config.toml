@@ -1,0 +1,26 @@
+baseURL = "https://wilkware.github.io"
+languageCode = "de-de"
+title = "Wilkware GitHub Pages"
+Paginate = 1000
+googleAnalytics = ""
+disableKinds = ["taxonomy", "taxonomyTerm", "RSS"]
+
+# this setting should always be set to false, otherwise it will break the section navigation bar
+pluralizelisttitles = false
+
+[params]
+  author = "Wilkware"
+  description = "Minimal, one page, theme for showcasing my work"
+  message = "My repositories ..."
+  hideAutoMenu = false
+  year = 2021
+
+[[menu.main]]
+  name = "HOME"
+  url = "https://wilkware.de"
+
+[social]
+  facebook = "http://facebook.com/heiko.wilknitz"
+  twitter = "hhttps://twitter.com/wilkware"
+  xing = "http://www.xing.com/profile/Heiko_Wilknitz"
+  linkedin = "https://www.linkedin.com/in/heikowilknitz"
