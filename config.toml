@@ -14,10 +14,11 @@ pluralizelisttitles = false
   message = "My repositories ..."
   hideAutoMenu = false
   year = 2022
+  url = "https://wilkware.de"
 
 [[menu.main]]
   name = "HOME"
-  url = "https://wilkware.de"
+  url = "https://github.com/wilkware"
 
 [social]
   facebook = "http://facebook.com/heiko.wilknitz"
