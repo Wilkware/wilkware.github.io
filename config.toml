@@ -13,7 +13,7 @@ pluralizelisttitles = false
   description = "Minimal, one page, theme for showcasing my work"
   message = "My repositories ..."
   hideAutoMenu = false
-  year = 2022
+  year = 2023
   url = "https://wilkware.de"
 
 [[menu.main]]
