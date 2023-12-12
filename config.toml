@@ -11,7 +11,7 @@ pluralizelisttitles = false
 [params]
   author = "Wilkware"
   description = "Minimal, one page, theme for showcasing my work"
-  message = "My repositories ..."
+  message = "My work ..."
   hideAutoMenu = false
   year = 2023
   url = "https://wilkware.de"

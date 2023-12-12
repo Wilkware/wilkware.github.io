@@ -1,5 +1,5 @@
 ---
-title: IPSymconAlmanac
+title: Jahreskalender (Almanac)
 date: 2017-04-26
 subtitle: Modul - Jahreskalneder (2017)
 link: https://github.com/Wilkware/IPSymconAlmanac
