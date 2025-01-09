@@ -1,7 +1,6 @@
 baseURL = "https://wilkware.github.io"
 languageCode = "de-de"
 title = "Wilkware GitHub Pages"
-Paginate = 1000
 googleAnalytics = ""
 disableKinds = ["taxonomy", "RSS"]
 
