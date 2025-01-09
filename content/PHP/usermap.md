@@ -1,5 +1,5 @@
 ---
-title: UserMap
+title: Benutzerkarte (User Map)
 date: 2023-12-06
 subtitle: Modul - Benutzerkarte (2023)
 link: https://github.com/Wilkware/UserMap
