@@ -15,11 +15,12 @@ pluralizelisttitles = false
   year = 2025
   url = "https://wilkware.de"
 
+[params.social]
+  facebook = "http://facebook.com/heiko.wilknitz"
+  xing = "http://www.xing.com/profile/Heiko_Wilknitz"
+  linkedin = "https://www.linkedin.com/in/heikowilknitz"
+
 [[menu.main]]
   name = "HOME"
   url = "https://github.com/wilkware"
 
-[social]
-  facebook = "http://facebook.com/heiko.wilknitz"
-  xing = "http://www.xing.com/profile/Heiko_Wilknitz"
-  linkedin = "https://www.linkedin.com/in/heikowilknitz"
