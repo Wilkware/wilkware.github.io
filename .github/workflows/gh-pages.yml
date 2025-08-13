@@ -1,32 +1,38 @@
-name: github pages
+name: GitHub Pages
 
+# Trigger für Push auf main und manuelles Starten
 on:
   push:
     branches:
-      - main  # Set a branch to deploy
-  pull_request:
+      - main
+  workflow_dispatch:  # ermöglicht manuelles Starten
 
 jobs:
   deploy:
     runs-on: ubuntu-20.04
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          submodules: true  # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
+    steps:
+      # Checkout Repository (Submodules nur, wenn nötig)
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          submodules: false   # setze auf true, falls du Hugo-Themes als Submodule hast
+          fetch-depth: 1      # schneller, braucht nur das letzte Commit
+
+      # Hugo Setup
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
-          # extended: true
 
+      # Build der Website
       - name: Build
         run: hugo --minify
 
+      # Deploy zu GitHub Pages, nur auf main
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
