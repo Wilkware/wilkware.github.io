@@ -1,0 +1,24 @@
+﻿name: Test GITHUB_TOKEN Push
+
+on:
+  workflow_dispatch:  # manuell startbar
+
+jobs:
+  test-push:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Create test branch and push
+        run: |
+          git checkout -b test-token-branch
+          echo "Token test $(date)" > push-test.txt
+          git add push-test.txt
+          git commit -m "Test push from GitHub Action"
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:test-token-branch
