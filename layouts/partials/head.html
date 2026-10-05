@@ -1,37 +1,29 @@
+{{- $title := site.Title -}}
+{{- if not .IsHome }}{{ $title = printf "%s – %s" .Title site.Title }}{{ end -}}
+{{- $description := site.Params.description -}}
+{{- $css := resources.Get "css/main.css" | minify | fingerprint -}}
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  {{ if .Site.Params.Author }}
-  <meta name="author" content="{{ .Site.Params.Author }}" />
-  {{ end }}
-  {{ if .Site.Params.Description }}
-  <meta
-    name="description"
-    content="{{ .Site.Params.Description }}"
-  />
-  {{ end }}
-  <title>{{ .Site.Title }}</title>
-  <link
-    href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
-    rel="stylesheet"
-  />
-  <style>
-    @font-face {
-      font-family: "Bree Serif";
-      src: url("./BreeSerif-Regular.ttf") format("truetype");
-    }
-    .font-bree {
-      font-family: "Bree Serif", serif;
-    }
-    .hide {
-      display: none;
-    }
-    .active {
-      background-color: #fd7e14;
-      color: white;
-    }
-    .active:hover {
-      color: white;
-    }
-  </style>
+  <meta name="color-scheme" content="light dark" />
+  <title>{{ $title }}</title>
+  <meta name="author" content="{{ site.Params.author }}" />
+  <meta name="description" content="{{ $description }}" />
+  <link rel="canonical" href="{{ .Permalink }}" />
+  <link rel="icon" type="image/png" href="{{ "favicon.png" | relURL }}" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:site_name" content="{{ site.Params.author }}" />
+  <meta property="og:title" content="{{ $title }}" />
+  <meta property="og:description" content="{{ $description }}" />
+  <meta property="og:url" content="{{ .Permalink }}" />
+  <meta property="og:image" content="{{ site.Params.image }}" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{ $title }}" />
+  <meta name="twitter:description" content="{{ $description }}" />
+  <meta name="twitter:image" content="{{ site.Params.image }}" />
+
+  <link rel="preload" href="{{ "breeserif-regular.ttf" | relURL }}" as="font" type="font/ttf" crossorigin />
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" />
 </head>

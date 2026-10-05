@@ -1,26 +1,58 @@
-baseURL = "https://wilkware.github.io"
-languageCode = "de-de"
-title = "Wilkware GitHub Pages"
-googleAnalytics = ""
-disableKinds = ["taxonomy", "RSS"]
+baseURL = "https://wilkware.github.io/"
+defaultContentLanguage = "de"
+locale = "de-DE"
+title = "Wilkware – Symcon Module & Projekte"
+disableKinds = ["taxonomy", "term", "RSS", "section"]
 
-# this setting should always be set to false, otherwise it will break the section navigation bar
-pluralizelisttitles = false
+# Project entries are only listed on the start page, no single pages are rendered
+[[cascade]]
+  [cascade.build]
+    render = "never"
+    list = "always"
+  [cascade.target]
+    kind = "page"
 
 [params]
   author = "Wilkware"
-  description = "Minimal, one page, theme for showcasing my work"
-  message = "My work ..."
-  hideAutoMenu = false
-  year = "05.10.2026"
+  description = "Übersicht aller Open-Source-Projekte von Wilkware: Module, Kacheln und Skins für Symcon sowie Bridges und Tools rund ums Smart Home."
+  headline = "Symcon Module & Projekte"
+  intro = "Open-Source-Erweiterungen für Symcon und das Smart Home – alle Projekte frei verfügbar auf GitHub."
+  since = 2017
   url = "https://wilkware.de"
+  github = "https://github.com/Wilkware"
+  image = "https://opengraph.githubassets.com/1/Wilkware/wilkware.github.io"
+  # Projects younger than this many months get a "Neu" badge
+  newMonths = 6
+
+  # Filter categories in display order (key = front matter "category")
+  [[params.categories]]
+    key = "modul"
+    label = "Module"
+  [[params.categories]]
+    key = "kachel"
+    label = "Kacheln & Widgets"
+  [[params.categories]]
+    key = "skin"
+    label = "Skins"
+  [[params.categories]]
+    key = "bridge"
+    label = "Bridges & Dienste"
+  [[params.categories]]
+    key = "tool"
+    label = "Tools"
 
 [params.social]
-  facebook = "http://facebook.com/heiko.wilknitz"
-  xing = "http://www.xing.com/profile/Heiko_Wilknitz"
+  github = "https://github.com/Wilkware"
   linkedin = "https://www.linkedin.com/in/heikowilknitz"
+  xing = "https://www.xing.com/profile/Heiko_Wilknitz"
+  facebook = "https://www.facebook.com/heiko.wilknitz"
 
 [[menu.main]]
-  name = "HOME"
-  url = "https://github.com/wilkware"
+  name = "GitHub"
+  url = "https://github.com/Wilkware"
+  weight = 1
 
+[[menu.main]]
+  name = "wilkware.de"
+  url = "https://wilkware.de"
+  weight = 2
