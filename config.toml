@@ -44,7 +44,6 @@ disableKinds = ["taxonomy", "term", "RSS", "section"]
 [params.social]
   github = "https://github.com/Wilkware"
   linkedin = "https://www.linkedin.com/in/heikowilknitz"
-  xing = "https://www.xing.com/profile/Heiko_Wilknitz"
   facebook = "https://www.facebook.com/heiko.wilknitz"
 
 [[menu.main]]
