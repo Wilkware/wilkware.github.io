@@ -1,7 +1,7 @@
 ---
 title: Zwischenstecker (Pluggable Switch)
-date: 2024-11-15
-subtitle: Modul - Zeitschaltuhr (2024)
-link: https://github.com/Wilkware/TimerSwitch
-image: https://opengraph.githubassets.com/499192fe1c3cc7836254a4720d66dc0e37bc7dd7458092f60ef477424eb57481/Wilkware/TimerSwitch
+date: 2024-09-08
+subtitle: Modul - Zwischenstecker (2024)
+link: https://github.com/Wilkware/PluggableSwitch
+image: https://opengraph.githubassets.com/0700ab3d225ae71195651b97f2b62b63de158cfb175ad388fd01897b20eff950/Wilkware/PluggableSwitch
 ---
