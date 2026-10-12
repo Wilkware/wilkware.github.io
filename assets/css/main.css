@@ -21,6 +21,7 @@
   --html: #e34c26;
   --js: #b8930b;
   --ts: #3178c6;
+  --py: #3572a5;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -273,6 +274,7 @@ main {
 .badge--html { background: var(--html); }
 .badge--js { background: var(--js); }
 .badge--ts { background: var(--ts); }
+.badge--py { background: var(--py); }
 .badge--other { background: var(--muted); }
 
 .badge--new {
